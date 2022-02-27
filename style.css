@@ -16,28 +16,35 @@ body {
 }
 
 .main-container {
-    /* border: 5px solid green; */
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
     justify-content: center;
-    /* gap: 3rem; */
     align-items: center;
 }
 
 h1 {
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 5px;
-    font-size: 50px;
     color: white;
-    /* font-weight: 700; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 h1 img {
     width: 5rem;
     height: 5rem;
     animation: hover-on-me 10s linear infinite alternate;
+}
+
+h1 span {
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 5px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
@@ -48,7 +55,6 @@ h2 {
     margin-top: 4rem;
     transform: skew(5deg, 5deg);
     animation: hover-on-me 10s linear infinite alternate;
-    /* border: 2px solid red; */
 }
 
 .arrow-container {
@@ -56,25 +62,18 @@ h2 {
     margin-top: 1rem;
     margin-bottom: 3rem;
     animation: hover-on-me 10s linear infinite alternate;
-    /* border: 2px solid red; */
 }
 
 .box-container {
-    /* border: 5px solid green; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    /* pointer-events: none; */
 }
 
 .boxes {
-    /* border: 2px solid red; */
     height: 30rem;
     width: 30rem;
-    /* pointer-events: auto; */
-    /* position: relative; */
-    /* background-color: black; */
 }
 
 .boxes img {
@@ -83,25 +82,15 @@ h2 {
     object-fit: cover;
     padding: 5px;
     border-radius: 50px;
-    /* background: linear-gradient(145deg, #f0f0f0, #cacaca); */
     box-shadow:  0px 0px 20px #000000,
              0px 0px 20px rgb(88, 88, 88);
 }
 
 .box-2 {
-    /* transform: rotateX(158deg); */
-    /* border: 2px solid red; */
     position: relative;
     display: flex;
     justify-content: center;
-    /* transition: all 2s; */
 }
-
-/* .box-2:hover {
-    transform: rotateY(158deg);
-    opacity: 0;
-    transition: all 1.2s;
-} */
 
 .box-2 img {
     position: relative;
@@ -114,11 +103,6 @@ h2 {
     opacity: 0;
     transition: all 1.2s;
 }
-
-/* .box-container:hover > .box-1:not(:hover), .box-container:hover > .box-3:not(:hover) {
-    transform: rotateZ(15deg);
-    transition: all 1.2s;
-} */
 
 .box-2 p {
     font-family: 'Harmattan', sans-serif;
@@ -136,7 +120,6 @@ h2 {
     height: 100%;
     width: 80%;
     color: white;
-    /* border: 3px solid greenyellow; */
     transition: opacity 2s;
 }
 
@@ -177,5 +160,33 @@ h2 {
     }
     90% {
         transform: skew(5deg, -5deg);
+    }
+}
+
+/* ------------ MEDIA QUERIES -------------- */
+
+
+@media (max-width:800px) {
+    body {
+        background-color: white;
+        background-image: url(./Images/TrollFace.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .main-container {
+        display: none;
+    }
+}
+
+@media (min-width:935px) and (max-width:1130px) {
+    h1 span {
+        font-size: 37px;
+    }
+}
+
+@media (min-width:800px) and (max-width:934.9px) {
+    h1 span {
+        font-size: 25px;
     }
 }
